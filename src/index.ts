@@ -1,8 +1,8 @@
 import { Hono } from "hono";
 import { serveStatic } from "hono/bun";
 
-const frontendUrl = "http://localhost:3000";
-const backendUrl = "http://localhost:5500";
+const frontendUrl = process.env.FRONTEND_URL || "http://localhost:3000";
+const backendUrl = process.env.BACKEND_URL || "http://localhost:5500";
 
 const app = new Hono();
 
